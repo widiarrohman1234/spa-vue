@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\SpaController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +17,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 Route::get('/', function () {
-    return redirect('api/post');
+    return view('welcome');
+});
+
+Route::get('index', function () {
+    return view('index');
+});
+
+Route::get('crud', function () {
+    return view('indexspa');
 });
